@@ -2,10 +2,10 @@
   <div id="app">
     <!--<img src="./assets/logo.png">-->
     <router-view/>
-    <button @click="showMeal = !showMeal">click for Meals</button>
     <transition name="component-fade" mode="out-in">
       <MealList v-if="showMeal"></MealList>
     </transition>
+
   </div>
 
 </template>
@@ -27,7 +27,7 @@
     data() {
       return {
         msg: 'Welcome to Your Vue.js App',
-        showMeal: false,
+        showMeal: true,
       }
     },
     computed: {

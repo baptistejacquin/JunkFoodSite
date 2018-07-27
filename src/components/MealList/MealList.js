@@ -10,6 +10,7 @@ export default {
   data () {
     return {
       meals: null,
+      randomMeal: null
     }
   },
   computed: {
@@ -24,5 +25,11 @@ export default {
 
   },
   methods: {
+    randomMealFunction(){
+      axios
+        .get('http://127.0.0.1:8000/api/meals/random')
+        .then(response => (this.randomMeal = response.data))
+
+    }
   }
 }
