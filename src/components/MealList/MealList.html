@@ -1,0 +1,24 @@
+
+<section class="meal">
+  <h1>Meal List</h1>
+  <br>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Restaurant</th>
+      <th>Speciality from</th>
+      <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr v-for="meal in meals">
+      <td > {{meal.name}} </td>
+      <td > {{meal.restaurant}} </td>
+      <td > {{meal.country}} </td>
+      <td>   {{meal.price/100}} €</td>
+    </tr>
+    </tbody>
+  </table>
+</section>
+
